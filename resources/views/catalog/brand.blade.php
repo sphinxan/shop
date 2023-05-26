@@ -6,8 +6,8 @@
     <p>{{ $brand->content }}</p>
 
     <div class="row">
-        @foreach ($products as $product)
-            @include('catalog.part.product', ['product' => $product])
+        @foreach ($brand->products as $product)
+            @include('catalog.part.product')
         @endforeach
     </div>
 @endsection
