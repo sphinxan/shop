@@ -1,6 +1,6 @@
 <script src="/js/site.js"></script>
 
-<h4>Разделы каталога</h4>
+<h4>Catalog sections</h4>
 <div id="catalog-sidebar">
     <ul>
     @foreach($items as $item)

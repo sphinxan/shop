@@ -1,4 +1,4 @@
-<h4>Популярные бренды</h4>
+<h4>Popular Brands</h4>
 <ul>
 @foreach($items as $item)
     <li>

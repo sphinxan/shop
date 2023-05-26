@@ -39,3 +39,12 @@ Route::post('/basket/remove/{id}', 'BasketController@remove')
     ->where('id', '[0-9]+')
     ->name('basket.remove');
 Route::post('/basket/clear', 'BasketController@clear')->name('basket.clear');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::name('user.')->prefix('user')->group(function () {
+    Route::get('index', 'UserController@index')->name('index');
+    Auth::routes();
+});

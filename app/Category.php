@@ -17,6 +17,7 @@ class Category extends Model
      * Возвращает список корневых категорий каталога товаров
      */
     public static function roots() {
+        //return self::where('parent_id', 0)->get();
         return self::where('parent_id', 0)->with('children')->get();
     }
 
