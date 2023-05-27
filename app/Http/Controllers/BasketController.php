@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Basket;
+use App\Models\Basket;
 use Cookie;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\ModelNotFoundException;

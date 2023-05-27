@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,9 +43,23 @@ Route::post('/basket/clear', 'BasketController@clear')->name('basket.clear');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group([
+    'middleware' => ['auth']
+], function() {
+    Route::get('/home', 'UserController@index')->name('home');
+    Route::get('/orders/{user}', 'UserController@getOrdersByUser')->name('home.orders');
+});
 
-Route::name('user.')->prefix('user')->group(function () {
-    Route::get('index', 'UserController@index')->name('index');
-    Auth::routes();
+Route::group([
+    'as' => 'admin.',
+    'prefix' => 'admin',
+    'namespace' => 'Admin',
+    'middleware' => ['auth', 'admin']
+], function () {
+    Route::get('index', 'AdminController')->name('index');
+    Route::resource('role', 'RoleController');
+    Route::resource('user', 'UserController');
+    Route::resource('order', 'OrderController', ['except' => [
+        'create', 'store', 'destroy'
+    ]]);
 });

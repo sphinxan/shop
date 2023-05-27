@@ -1,6 +1,6 @@
 <?php
 
-use App\User;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -15,11 +15,12 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
+
         $user = User::create([
             'name' => 'admin',
-            'email' => 'admin@admin.com',
+            'email' => 'admin@mail.com',
             'email_verified_at' => now(),
-            'password' => Hash::make('qwertyui'), // password
+            'password' => Hash::make('12345678'),
             'remember_token' => Str::random(10),
         ]);
 
