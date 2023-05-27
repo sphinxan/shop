@@ -30,61 +30,61 @@
 ## Внешний вид
 
 ### Авторизация
-![auth.png](show service/авторизация.png)
+![auth.png](showService/авторизация.png)
 
 ### Регистрация
-![register.png](show service/регистрация.png)
+![register.png](showService/регистрация.png)
 
 ### Главная страница
-![mainPage.png](show service/главная страница.png)
+![mainPage.png](showService/главная_страница.png)
 
 ### Каталог товаров
-![productsCatalog.png](show service/каталог товаров.png)
+![productsCatalog.png](showService/каталог_товаров.png)
 
 ### Каталог брендов
-![brandsCatalog.png](show service/каталог брендов.png)
+![brandsCatalog.png](showService/каталог_брендов.png)
 
 ### Страница товара
-![productPage.png](show service/страница товара.png)
+![productPage.png](showService/страница_товара.png)
 
 ### Корзина
-![basket.png](show service/корзина.png)
+![basket.png](showService/корзина.png)
 
 ### Корзина пустая 
-![basketEmpty.png](show service/корзина пуста.png)
+![basketEmpty.png](showService/корзина_пуста.png)
 
 ### Оформление заказа
-![orderPlace.png](show service/оформление заказа.png)
+![orderPlace.png](showService/оформление_заказа.png)
 
 ### Заказ оформлен
-![orderPlaced.png](show service/заказ оформлен.png)
+![orderPlaced.png](showService/заказ_оформлен.png)
 
 ### Личный кабинет
-![profile.png](show service/личный кабинет.png)
+![profile.png](showService/личный_кабинет.png)
 
 ### Список личных заказов
-![profileOrders.png](show service/список личных заказов.png)
+![profileOrders.png](showService/список_личных_заказов.png)
 
 ### Панель админа
-![adminPanel.png](show service/панель админа.png)
+![adminPanel.png](showService/панель_админа.png)
 
 ### Список всех заказов (админ)
-![adminOrdersList.png](show service/список всех заказов (админ).png)
+![adminOrdersList.png](showService/список_всех_заказов(админ).png)
 
 ### Просмотр заказа (админ)
-![adminOrderView.png](show service/просмотр заказа (админ).png)
+![adminOrderView.png](showService/просмотр_заказа(админ).png)
 
 ### Редактирование заказа (админ)
-![adminOrderEdit.png](show service/редактирование заказа (админ).png)
+![adminOrderEdit.png](showService/редактирование_заказа(админ).png)
 
 ### Статус заказа отредактирован (админ)
-![adminOrderEditSucceess.png](show service/статус заказа отредактирован (админ).png)
+![adminOrderEditSucceess.png](showService/статус_заказа_отредактирован(админ).png)
 
 ### Список ролей (админ)
-![adminRolesList.png](show service/список ролей.png)
+![adminRolesList.png](showService/список_ролей.png)
 
 ### Создание новой роли (админ)
-![adminRoleAdd.png](show service/создание новой роли.png)
+![adminRoleAdd.png](showService/создание_новой_роли.png)
 
 ### Список пользователей с ролями (админ)
-![adminUserRolesList.png](show service/список пользователей с ролями.png)
+![adminUserRolesList.png](showService/список_пользователей_с_ролями.png)
