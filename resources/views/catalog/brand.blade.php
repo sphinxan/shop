@@ -1,7 +1,7 @@
 @extends('layout.site')
 
 @section('content')
-    <h1>Бренд: {{ $brand->name }}</h1>
+    <h1>Brand: {{ $brand->name }}</h1>
 
     <p>{{ $brand->content }}</p>
 

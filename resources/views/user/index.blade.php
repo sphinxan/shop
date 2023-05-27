@@ -1,11 +1,11 @@
 @extends('layout.site')
 
 @section('content')
-    <h1>Личный кабинет</h1>
-    <p>Добро пожаловать, {{ auth()->user()->name }}</p>
-    <p>Это личный кабинет постоянного покупателя нашего интернет-магазина.</p>
+    <h1>Personal account</h1>
+    <p>Welcome, {{ auth()->user()->name }}!</p>
+    <p>This is the personal account of a regular customer of our SuperShop.</p>
     <form action="{{ route('logout') }}" method="post">
         @csrf
-        <button type="submit" class="btn btn-primary">Выйти</button>
+        <button type="submit" class="btn btn-primary">LogOut</button>
     </form>
 @endsection

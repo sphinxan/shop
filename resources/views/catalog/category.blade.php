@@ -1,7 +1,7 @@
 @extends('layout.site')
 
 @section('content')
-    <h1>Категория: {{ $category->name }}</h1>
+    <h1>Category: {{ $category->name }}</h1>
 
     <p>{{ $category->content }}</p>
 

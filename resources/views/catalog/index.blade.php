@@ -1,7 +1,7 @@
 @extends('layout.site')
 
 @section('content')
-    <h1>Каталог товаров</h1>
+    <h1>Products catalog</h1>
 
     <p>
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque ducimus, eligendi
@@ -9,7 +9,7 @@
     tempora tempore ullam! Deserunt doloremque impedit quis repudiandae voluptas?
     </p>
 
-    <h2>Разделы каталога</h2>
+    <h2>Catalog sections</h2>
     <div class="row">
         @foreach ($roots as $root)
             @include('catalog.part.category', ['category' => $root])

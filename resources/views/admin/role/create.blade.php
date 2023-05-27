@@ -5,7 +5,7 @@
     <form method="post" action="{{ route('admin.role.store') }}" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
-            <input type="text" class="form-control" name="name" placeholder="Наименование"
+            <input type="text" class="form-control" name="name" placeholder="Name"
                    required maxlength="100" value="{{ old('name') ?? '' }}">
         </div>
         <div class="form-group">

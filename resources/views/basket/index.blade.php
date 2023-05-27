@@ -1,7 +1,7 @@
 @extends('layout.site')
 
 @section('content')
-    <h1>Ваша корзина</h1>
+    <h1>Your basket</h1>
     @if (count($products))
         @php
             $basketCost = 0;
@@ -9,16 +9,16 @@
         <form action="{{ route('basket.clear') }}" method="post" class="text-right">
             @csrf
             <button type="submit" class="btn btn-outline-danger mb-4 mt-0">
-                Очистить корзину
+                Empty the basket
             </button>
         </form>
         <table class="table table-bordered">
             <tr>
                 <th>№</th>
-                <th>Наименование</th>
-                <th>Цена</th>
-                <th>Кол-во</th>
-                <th>Стоимость</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Count</th>
+                <th>Cost</th>
                 <th></th>
             </tr>
             @foreach($products as $product)
@@ -66,12 +66,12 @@
                 </tr>
             @endforeach
             <tr>
-                <th colspan="4" class="text-right">Итого</th>
+                <th colspan="4" class="text-right">Total</th>
                 <th>{{ number_format($basketCost, 2, '.', '') }}</th>
                 <th></th>
             </tr>
         </table>
     @else
-        <p>Ваша корзина пуста</p>
+        <p>Your basket is empty:(</p>
     @endif
 @endsection

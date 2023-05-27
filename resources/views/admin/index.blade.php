@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>Control Panel</h1>
-    <p>Welcome! {{ auth()->user()->name }}</p>
+    <p>Welcome, {{ auth()->user()->name }}!</p>
     <p>This is a control panel for the administrator of an SuperShop.</p>
     <form action="{{ route('admin.role.index') }}" class="text-left">
             <button class="btn btn-success mb-4 mt-0">

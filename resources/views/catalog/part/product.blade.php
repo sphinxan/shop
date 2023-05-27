@@ -11,10 +11,10 @@
             <form action="{{ route('basket.add', ['id' => $product->id]) }}"
                   method="post" class="d-inline">
                 @csrf
-                <button type="submit" class="btn btn-success">Добавить в корзину</button>
+                <button type="submit" class="btn btn-success">Add to basket</button>
             </form>
             <a href="{{ route('catalog.product', ['slug' => $product->slug]) }}"
-               class="btn btn-dark float-right">Перейти к товару</a>
+               class="btn btn-dark float-right">Go to the product</a>
         </div>
     </div>
 </div>
