@@ -56,14 +56,25 @@ Route::group([
 });
 
 Route::group([
-    'as' => 'admin.',
-    'prefix' => 'admin',
-    'namespace' => 'Admin',
-    'middleware' => ['auth', 'admin']
+    'as' => 'admin.', // имя маршрута, например admin.index
+    'prefix' => 'admin', // префикс маршрута, например admin/index
+    'namespace' => 'Admin', // пространство имен контроллера
+    'middleware' => ['auth', 'admin'] // один или несколько посредников
 ], function () {
+    // главная страница панели управления
     Route::get('index', 'AdminController')->name('index');
     Route::resource('role', 'RoleController');
     Route::resource('user', 'UserController');
+    // CRUD-операции над категориями каталога
+    Route::resource('category', 'CategoryController');
+    // CRUD-операции над брендами каталога
+    Route::resource('brand', 'BrandController');
+    // CRUD-операции над товарами каталога
+    Route::resource('product', 'ProductController');
+    // доп.маршрут для показа товаров категории
+    Route::get('product/category/{category}', 'ProductController@category')
+        ->name('product.category');
+    // просмотр и редактирование заказов
     Route::resource('order', 'OrderController', ['except' => [
         'create', 'store', 'destroy'
     ]]);

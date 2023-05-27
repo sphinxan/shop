@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Order;
 
 class UserController extends Controller
 {
@@ -25,5 +26,11 @@ class UserController extends Controller
     public function index()
     {
         return view('user.index');
+    }
+
+    public function getOrdersByUser(User $user) {
+        $orders = $user->orders;
+        $statuses = Order::STATUSES;
+        return view('user.orders', compact('orders', 'statuses'));
     }
 }
