@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Basket;
 use App\Models\Order;
+use App\Mail\OrderShipping;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Support\Facades\Mail;
 
 class BasketController extends Controller
 {
@@ -115,6 +117,8 @@ class BasketController extends Controller
         $order = Order::create(
             $request->all() + ['amount' => $basket->getAmount(), 'user_id' => $user_id]
         );
+
+        Mail::to(auth()->user())->send(new OrderShipping($order));
 
         foreach ($basket->products as $product) {
             $order->items()->create([
