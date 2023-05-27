@@ -45,7 +45,7 @@ class LoginController extends Controller
     protected function authenticated(Request $request, $user) {
         $route = 'home';
         $message = 'You have successfully logged into your personal account';
-        if ($user->admin) {
+        if ($user->hasRole('admin')) {
             $route = 'admin.index';
             $message = 'You have successfully logged into the control panel';
         }
