@@ -41,6 +41,11 @@ Route::post('/basket/remove/{id}', 'BasketController@remove')
     ->name('basket.remove');
 Route::post('/basket/clear', 'BasketController@clear')->name('basket.clear');
 
+Route::post('/basket/create-order', 'BasketController@createOrder')->name('basket.create');
+Route::get('/basket/success', 'BasketController@success')
+    ->name('basket.success');
+Route::post('/basket/saveorder', 'BasketController@saveOrder')->name('basket.saveorder');
+
 Auth::routes();
 
 Route::group([

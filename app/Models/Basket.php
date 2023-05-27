@@ -34,6 +34,15 @@ class Basket extends Model {
         return $basket;
     }
 
+    public function getAmount() {
+        $amount = 0.0;
+        foreach ($this->products as $product) {
+            $amount = $amount + $product->price * $product->pivot->quantity;
+        }
+        return $amount;
+    }
+
+
     /**
      * Связь «многие ко многим» таблицы `baskets` с таблицей `products`
      */
