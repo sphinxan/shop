@@ -65,17 +65,9 @@ Route::group([
     Route::get('index', 'AdminController')->name('index');
     Route::resource('role', 'RoleController');
     Route::resource('user', 'UserController');
-    // CRUD-операции над категориями каталога
-    Route::resource('category', 'CategoryController');
-    // CRUD-операции над брендами каталога
-    Route::resource('brand', 'BrandController');
-    // CRUD-операции над товарами каталога
-    Route::resource('product', 'ProductController');
-    // доп.маршрут для показа товаров категории
-    Route::get('product/category/{category}', 'ProductController@category')
-        ->name('product.category');
     // просмотр и редактирование заказов
     Route::resource('order', 'OrderController', ['except' => [
         'create', 'store', 'destroy'
     ]]);
+    Route::post('/user/saverole', 'RoleController@edit')->name('user.edit');
 });
